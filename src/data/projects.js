@@ -1,54 +1,68 @@
 export const projects = [
   {
     id: 1,
-    title: "Calculator App",
+    title: "Portfolio Website",
     description:
-      "A sleek, fully functional calculator supporting standard arithmetic operations with keyboard support and a responsive layout.",
-    tags: ["JavaScript", "CSS3", "HTML5"],
-    category: "JavaScript",
-    github: "https://github.com/kavikumarsingh/calculator-app",
-    demo: "https://calculator-app-demo.vercel.app",
+      "A modern personal portfolio built with React, Vite, Tailwind CSS, and Framer Motion. Features responsive design, dark/light mode, smooth animations, project showcase, skills, certifications, resume download, and contact form.",
+    tags: ["React", "Tailwind CSS", "Vite", "Framer Motion"],
+    category: "React",
+    github: "https://github.com/kavisingh300/kavi-portfolio",
+    demo: "https://your-portfolio.vercel.app",
   },
   {
     id: 2,
-    title: "Password Generator",
+    title: "Responsive Shopping UI",
     description:
-      "Generates strong, customizable passwords with options for length, symbols, numbers, and uppercase letters, plus one-click copy.",
-    tags: ["JavaScript", "HTML5", "CSS3"],
-    category: "JavaScript",
-    github: "https://github.com/kavikumarsingh/password-generator",
-    demo: "https://password-generator-demo.vercel.app",
+      "A responsive e-commerce user interface built with React and Tailwind CSS featuring reusable components, product cards, clean layouts, and a mobile-first design approach.",
+    tags: ["React", "Tailwind CSS", "Vite"],
+    category: "React",
+    github: "https://github.com/kavisingh300/Responsive-Shopping-UI",
+    demo: "https://your-shopping-ui.vercel.app",
   },
   {
     id: 3,
-    title: "Responsive Shopping UI",
+    title: "Password Generator",
     description:
-      "An e-commerce style storefront UI with product grids, cart interactions, and a fully mobile-first responsive layout.",
-    tags: ["React.js", "Tailwind CSS", "Vite"],
-    category: "React",
-    github: "https://github.com/kavikumarsingh/shopping-ui",
-    demo: "https://shopping-ui-demo.vercel.app",
+      "A customizable password generator that creates secure passwords with adjustable length, uppercase letters, lowercase letters, numbers, and special characters, including one-click copy functionality.",
+    tags: ["JavaScript", "HTML", "CSS"],
+    category: "JavaScript",
+    github: "https://github.com/kavisingh300/password-generator",
+    demo: "https://your-password-generator.vercel.app",
   },
   {
     id: 4,
-    title: "To-Do App",
+    title: "Calculator App",
     description:
-      "A task management app with add, edit, delete, and complete functionality, local storage persistence, and smooth animations.",
-    tags: ["React.js", "CSS3"],
-    category: "React",
-    github: "https://github.com/kavikumarsingh/todo-app",
-    demo: "https://todo-app-demo.vercel.app",
+      "A responsive calculator built using HTML, CSS, and JavaScript that performs standard arithmetic operations with a clean interface and keyboard support.",
+    tags: ["JavaScript", "HTML", "CSS"],
+    category: "JavaScript",
+    github: "https://github.com/kavisingh300/calculator-app",
+    demo: "https://your-calculator.vercel.app",
   },
   {
     id: 5,
-    title: "API Handling Project",
+    title: "To-Do App",
     description:
-      "A data-driven app that fetches, filters, and displays live data from a public REST API with loading and error states.",
-    tags: ["React.js", "JavaScript", "REST API"],
+      "A React-based task management application with add, edit, delete, complete, and local storage functionality to efficiently manage daily tasks.",
+    tags: ["React", "CSS", "Local Storage"],
     category: "React",
-    github: "https://github.com/kavikumarsingh/api-handling-project",
-    demo: "https://api-handling-demo.vercel.app",
+    github: "https://github.com/kavisingh300/todo-app",
+    demo: "https://your-todo-app.vercel.app",
+  },
+  {
+    id: 6,
+    title: "API Handling",
+    description:
+      "A React application demonstrating REST API integration using Axios, including data fetching, loading states, error handling, and CRUD operations with MockAPI.",
+    tags: ["React", "Axios", "REST API"],
+    category: "React",
+    github: "https://github.com/kavisingh300/API-handling",
+    demo: "https://your-api-handling.vercel.app",
   },
 ];
 
-export const filterCategories = ["All", "React", "JavaScript"];
+export const filterCategories = [
+  "All",
+  "React",
+  "JavaScript",
+];
