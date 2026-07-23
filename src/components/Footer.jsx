@@ -1,10 +1,21 @@
-import { FiGithub, FiLinkedin, FiMail, FiTwitter } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 const socials = [
-  { icon: <FiGithub size={17} />, href: "https://github.com/kavikumarsingh", label: "GitHub" },
-  { icon: <FiLinkedin size={17} />, href: "https://linkedin.com/in/kavikumarsingh", label: "LinkedIn" },
-  { icon: <FiTwitter size={17} />, href: "https://twitter.com/kavikumarsingh", label: "Twitter" },
-  { icon: <FiMail size={17} />, href: "mailto:kavikumarsingh@example.com", label: "Email" },
+  {
+    icon: <FiGithub size={17} />,
+    href: "https://github.com/kavisingh300",
+    label: "GitHub",
+  },
+  {
+    icon: <FiLinkedin size={17} />,
+    href: "https://www.linkedin.com/in/kavi-singh-a9537a26a",
+    label: "LinkedIn",
+  },
+  {
+    icon: <FiMail size={17} />,
+    href: "mailto:kavisingh300@gmail.com",
+    label: "Email",
+  },
 ];
 
 export default function Footer() {
@@ -25,8 +36,8 @@ export default function Footer() {
             <a
               key={s.label}
               href={s.href}
-              target="_blank"
-              rel="noreferrer"
+              target={s.label === "Email" ? "_self" : "_blank"}
+              rel={s.label === "Email" ? undefined : "noreferrer"}
               aria-label={s.label}
               className="grid h-10 w-10 place-items-center rounded-full glass hover:text-[var(--accent)] hover:-translate-y-1 transition-all"
             >

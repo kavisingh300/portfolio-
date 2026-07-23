@@ -63,12 +63,12 @@ export default function Contact() {
                 className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-white"
                 style={{ background: "linear-gradient(135deg, var(--primary), var(--accent))" }}
               >
-                <FiMail size={16} />
+                <FiMail size={20} />
               </span>
               <div>
                 <p className="text-sm font-medium">Email</p>
                 <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-                  kavikumarsingh@example.com
+                  kavisingh300@gmail.com
                 </p>
               </div>
             </div>
@@ -77,7 +77,7 @@ export default function Contact() {
                 className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-white"
                 style={{ background: "linear-gradient(135deg, var(--secondary), var(--accent))" }}
               >
-                <FiMapPin size={16} />
+                <FiMapPin size={20} />
               </span>
               <div>
                 <p className="text-sm font-medium">Location</p>

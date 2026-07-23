@@ -20,7 +20,7 @@ export default function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  return (
+  return (<>
     <ThemeProvider>
       <Loader show={loading} />
       <div className="gradient-bg" aria-hidden="true" />
@@ -37,5 +37,6 @@ export default function App() {
       <Footer />
       <BackToTop />
     </ThemeProvider>
+  </>
   );
 }

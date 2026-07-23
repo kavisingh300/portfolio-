@@ -1,13 +1,19 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiMail, FiDownload, FiArrowDown } from "react-icons/fi";
+import {
+  FiGithub,
+  FiLinkedin,
+  FiMail,
+  FiDownload,
+  FiArrowDown,
+} from "react-icons/fi";
 import { stats } from "../data/skills";
 
 const roles = [
   "Frontend Developer",
-  "React.js Enthusiast",
+  "React Developer",
+  "JavaScript Developer",
   "B.Tech CSE Student",
-  "UI Craftsman",
 ];
 
 function useTypewriter(words, speed = 90, pause = 1400) {
@@ -20,11 +26,17 @@ function useTypewriter(words, speed = 90, pause = 1400) {
     let timeout;
 
     if (!deleting && text.length < current.length) {
-      timeout = setTimeout(() => setText(current.slice(0, text.length + 1)), speed);
+      timeout = setTimeout(
+        () => setText(current.slice(0, text.length + 1)),
+        speed,
+      );
     } else if (!deleting && text.length === current.length) {
       timeout = setTimeout(() => setDeleting(true), pause);
     } else if (deleting && text.length > 0) {
-      timeout = setTimeout(() => setText(current.slice(0, text.length - 1)), speed / 2);
+      timeout = setTimeout(
+        () => setText(current.slice(0, text.length - 1)),
+        speed / 2,
+      );
     } else if (deleting && text.length === 0) {
       setDeleting(false);
       setWordIndex((i) => i + 1);
@@ -85,6 +97,7 @@ export default function Hero() {
           <p className="font-mono-tag text-sm text-[var(--accent)]">
             Hi, my name is
           </p>
+          
           <h1 className="mt-3 font-display text-4xl font-bold leading-tight sm:text-5xl">
             Kavi Kumar Singh
           </h1>
@@ -92,10 +105,13 @@ export default function Hero() {
             <span className="text-gradient">{typed}</span>
             <span className="animate-pulse text-[var(--accent)]">|</span>
           </div>
-          <p className="mt-5 max-w-md text-[15px] leading-relaxed" style={{ color: "var(--text-muted)" }}>
-            B.Tech CSE student (2022–2026) at Uttaranchal University, passionate
-            about building responsive, user-friendly websites and solving
-            real-world problems through code.
+          <p
+            className="mt-5 max-w-lg text-[15px] leading-relaxed"
+            style={{ color: "var(--text-muted)" }}
+          >
+          B.Tech Cse student (2022-2026) at Uttranchal University,
+          passionate about building responsive, user-friendly websites
+          and solving real-world problems through code
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -118,17 +134,23 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-8 flex items-center gap-4">
+          <div className="mt-8 flex flex-wrap items-center gap-4">
             {[
-              { icon: <FiGithub />, href: "https://github.com/kavikumarsingh" },
-              { icon: <FiLinkedin />, href: "https://linkedin.com/in/kavikumarsingh" },
-              { icon: <FiMail />, href: "mailto:kavikumarsingh@example.com" },
+              { icon: <FiGithub />, href: "https://github.com/kavisingh300" },
+              {
+                icon: <FiLinkedin />,
+                href: "https://www.linkedin.com/in/kavi-singh-a9537a26a",
+              },
+              {
+                icon: <FiMail />,
+                href: "mailto:kavisingh300@gmail.com",
+              },
             ].map((s, i) => (
               <a
                 key={i}
                 href={s.href}
-                target="_blank"
-                rel="noreferrer"
+                target={s.href.startsWith("mailto:") ? "_self" : "_blank"}
+                rel={s.href.startsWith("mailto:") ? undefined : "noreferrer"}
                 className="grid h-10 w-10 place-items-center rounded-full glass hover:text-[var(--accent)] hover:-translate-y-1 transition-all"
               >
                 {s.icon}
@@ -139,8 +161,15 @@ export default function Hero() {
           <div className="mt-12 grid max-w-md grid-cols-4 gap-4">
             {stats.map((s, i) => (
               <div key={s.label}>
-                <StatCounter value={s.value} suffix={s.suffix} delay={i * 150} />
-                <p className="mt-1 text-xs" style={{ color: "var(--text-muted)" }}>
+                <StatCounter
+                  value={s.value}
+                  suffix={s.suffix}
+                  delay={i * 150}
+                />
+                <p
+                  className="mt-1 text-xs"
+                  style={{ color: "var(--text-muted)" }}
+                >
                   {s.label}
                 </p>
               </div>
@@ -155,23 +184,39 @@ export default function Hero() {
           className="relative"
         >
           <div className="glass mx-auto w-full max-w-md rounded-2xl p-0 shadow-2xl shadow-black/20 overflow-hidden">
-            <div className="flex items-center gap-2 border-b px-4 py-3" style={{ borderColor: "var(--surface-border)" }}>
+            <div
+              className="flex items-center gap-2 border-b px-4 py-3"
+              style={{ borderColor: "var(--surface-border)" }}
+            >
               <span className="h-3 w-3 rounded-full bg-red-400" />
               <span className="h-3 w-3 rounded-full bg-yellow-400" />
               <span className="h-3 w-3 rounded-full bg-green-400" />
-              <span className="ml-2 font-mono-tag text-xs" style={{ color: "var(--text-muted)" }}>
+              <span
+                className="ml-2 font-mono-tag text-xs"
+                style={{ color: "var(--text-muted)" }}
+              >
                 kavi.dev — profile.js
               </span>
             </div>
             <pre className="font-mono-tag overflow-x-auto p-5 text-[13px] leading-relaxed">
-<code>
-<span style={{ color: "var(--accent)" }}>const</span> developer = {"{"}
-{"\n  "}name: <span style={{ color: "#a5d6ff" }}>"Kavi Kumar Singh"</span>,
-{"\n  "}role: <span style={{ color: "#a5d6ff" }}>"Frontend Developer"</span>,
-{"\n  "}stack: [<span style={{ color: "#a5d6ff" }}>"React"</span>, <span style={{ color: "#a5d6ff" }}>"Vite"</span>, <span style={{ color: "#a5d6ff" }}>"Tailwind"</span>],
-{"\n  "}status: <span style={{ color: "#a5d6ff" }}>"open to opportunities"</span>,
-{"\n"}{"}"};
-</code>
+              <code>
+                <span style={{ color: "var(--accent)" }}>const</span> developer
+                = {"{"}
+                {"\n  "}name:{" "}
+                <span style={{ color: "#a5d6ff" }}>"Kavi Kumar Singh"</span>,
+                {"\n  "}role:{" "}
+                <span style={{ color: "#a5d6ff" }}>"Frontend Developer"</span>,
+                {"\n  "}stack: [
+                <span style={{ color: "#a5d6ff" }}>"React"</span>,{" "}
+                <span style={{ color: "#a5d6ff" }}>"Vite"</span>,{" "}
+                <span style={{ color: "#a5d6ff" }}>"Tailwind"</span>],
+                {"\n  "}status:{" "}
+                <span style={{ color: "#a5d6ff" }}>
+                  "open to opportunities"
+                </span>
+                ,{"\n"}
+                {"}"};
+              </code>
             </pre>
           </div>
           <motion.div
@@ -179,7 +224,8 @@ export default function Hero() {
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
-            <span className="text-[var(--accent)]">●</span> Fresher · Ready to build
+            <span className="text-[var(--accent)]">●</span> Fresher · Ready to
+            build
           </motion.div>
         </motion.div>
       </div>

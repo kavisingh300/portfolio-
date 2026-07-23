@@ -30,5 +30,5 @@ export const stats = [
   { label: "Projects Built", value: 5, suffix: "+" },
   { label: "Technologies", value: 10, suffix: "+" },
   { label: "Years Learning", value: 3, suffix: "+" },
-  { label: "GitHub Commits", value: 200, suffix: "+" },
+  { label: "GitHub Commits", value: 500, suffix: "+" },
 ];
