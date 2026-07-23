@@ -1,74 +1,167 @@
-# Kavi Kumar Singh — Portfolio (portpoli)
+# 🚀 Kavi Kumar Singh – Developer Portfolio
 
-A modern, responsive, glassmorphism-styled personal portfolio built with **React + Vite + Tailwind CSS v4**.
+A modern, responsive, and interactive personal portfolio showcasing my skills, projects, education, and achievements as a Full Stack Web Developer. Built with **React**, **Vite**, **Tailwind CSS v4**, and **Framer Motion**, the portfolio features smooth animations, a clean glassmorphism design, dark/light mode, and a mobile-first responsive layout.
+
+---
+
+## 🌐 Live Demo
+
+**Website:** *Add your Vercel URL here*
+
+**GitHub Repository:** *Add your repository URL here*
+
+---
 
 ## ✨ Features
 
-- Hero section with animated typing effect and a live "code card" signature element
-- Dark / light mode toggle (persisted to localStorage, respects system preference)
-- Glassmorphism UI with an animated gradient mesh background
-- Scroll-reveal animations (Framer Motion + IntersectionObserver)
-- Skills section with animated progress bars, grouped by category
-- Animated stat counters in the Hero section
-- Featured Projects grid with category filtering (All / React / JavaScript), GitHub + Live Demo links
-- Education & Experience timeline
-- Certificates section (placeholder cards — swap in your real certificates)
-- Resume download button (`public/resume.pdf` — replace with your real resume)
-- Contact form with client-side validation
-- Back-to-top button, loading animation, fully responsive (mobile-first)
-- SEO meta tags (title, description, keywords, Open Graph)
+* 🎨 Modern Glassmorphism UI
+* 🌙 Dark & Light Mode (System Preference Support)
+* 📱 Fully Responsive Design
+* ⚡ Built with React 19 & Vite
+* 🎬 Smooth Scroll & Reveal Animations
+* 📊 Animated Skill Progress Bars
+* 📈 Dynamic Statistics Counter
+* 💼 Project Showcase with Category Filters
+* 🎓 Education & Experience Timeline
+* 🏆 Certificates Section
+* 📄 Resume Download
+* 📬 Contact Form with Validation
+* ⬆️ Back-to-Top Button
+* 🔍 SEO Optimized
+* 🚀 Fast Performance
 
-## 🧱 Tech Stack
+---
 
-React 19 · Vite · Tailwind CSS v4 · Framer Motion · react-icons · react-intersection-observer
+## 🛠️ Tech Stack
 
-## 📁 Project Structure
+### Frontend
 
-```
+* React 19
+* Vite
+* Tailwind CSS v4
+* Framer Motion
+* React Icons
+* React Intersection Observer
+
+### Tools
+
+* Git
+* GitHub
+* VS Code
+* Vercel
+
+---
+
+## 📂 Project Structure
+
+```text
 src/
-  main.jsx              # App entry point
-  App.jsx                # Composes all sections
-  index.css              # Design tokens, theme variables, gradient bg, glass utility
-  context/
-    ThemeContext.jsx     # Dark/light mode provider
-  components/
-    Loader.jsx
-    Navbar.jsx
-    Hero.jsx
-    About.jsx
-    Skills.jsx
-    Projects.jsx
-    Education.jsx
-    Certificates.jsx
-    Contact.jsx
-    Footer.jsx
-    BackToTop.jsx
-    Reveal.jsx            # Reusable scroll-reveal wrapper
-  data/
-    skills.js             # Skills + stats data
-    projects.js            # Projects + filter categories
-    education.js           # Education, experience, certificates
+│── assets/
+│── components/
+│── context/
+│── data/
+│── App.jsx
+│── main.jsx
+│── index.css
+
 public/
-  resume.pdf              # Replace with your real resume
+│── resume.pdf
+│── icons.svg
 ```
 
-## 🚀 Getting Started
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/kavisingh300/kavi-portfolio.git
+```
+
+Go to the project folder:
+
+```bash
+cd kavi-portfolio
+```
+
+Install dependencies:
 
 ```bash
 npm install
-npm run dev       # start local dev server
-npm run build     # production build → dist/
-npm run preview   # preview the production build
 ```
 
-## 🎨 Customize
+Start the development server:
 
-- **Colors**: edit the CSS variables in `src/index.css` (`:root` and `[data-theme="light"]`) or the `@theme` block for the Tailwind tokens.
-- **Content**: edit the files in `src/data/` — no need to touch components for text/project/skill changes.
-- **Resume**: replace `public/resume.pdf` with your actual resume file.
-- **Social & contact links**: update the arrays in `Hero.jsx`, `Footer.jsx`, and `Contact.jsx`.
-- **Contact form backend**: the form currently validates and shows a success state locally. Wire it up to a real service (e.g. Formspree, EmailJS, or your own API) inside `handleSubmit` in `Contact.jsx`.
+```bash
+npm run dev
+```
 
-## 📦 Deploy
+Build for production:
 
-Works out of the box on **Vercel**, **Netlify**, or **GitHub Pages** — just run `npm run build` and deploy the `dist/` folder (or connect the repo directly for CI builds).
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 🎯 Customization
+
+You can easily customize the portfolio:
+
+* Update personal information
+* Add or remove projects
+* Modify skills
+* Replace `public/resume.pdf` with your latest resume
+* Update social media links
+* Change colors and themes in `src/index.css`
+
+---
+
+## 📸 Screenshots
+
+> Add screenshots of your portfolio homepage and project sections here.
+
+---
+
+## 📈 Future Improvements
+
+* Blog Section
+* Admin Dashboard
+* Project Search
+* Contact Form Backend
+* Multi-language Support
+* Project Details Pages
+* Performance Enhancements
+
+---
+
+## 👨‍💻 About Me
+
+I'm **Kavi Kumar Singh**, a B.Tech Computer Science student passionate about building modern, responsive, and user-friendly web applications. I enjoy working with React, JavaScript, and modern frontend technologies while continuously learning new skills.
+
+---
+
+## 🤝 Connect With Me
+
+* GitHub: https://github.com/kavisingh300
+* LinkedIn: *Add your LinkedIn profile*
+* Email: [kavisingh300@gmail.com](mailto:kavisingh300@gmail.com)
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a **⭐ Star** on GitHub. It motivates me to build and share more projects.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
